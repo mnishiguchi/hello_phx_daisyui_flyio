@@ -1,6 +1,6 @@
-<ul>
+<ul class="menu menu-horizontal p-0">
 <%= if @current_user do %>
-  <li><%= @current_user.email %></li>
+  <li><a href="#"><%= @current_user.email %></a></li>
   <li><%= link "Settings", to: Routes.user_settings_path(@conn, :edit) %></li>
   <li><%= link "Log out", to: Routes.user_session_path(@conn, :delete), method: :delete %></li>
 <% else %>
